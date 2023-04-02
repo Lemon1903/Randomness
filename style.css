@@ -1,0 +1,139 @@
+@import url("https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;700&display=swap");
+
+:root {
+  --dark-blue: hsl(217, 62%, 12%);
+  --light-green-hsl: hsl(78, 98%, 76%);
+  --light-green-alpha: hsla(78, 98%, 76%, 0.5);
+  --darkish-beige: hsl(47, 19%, 63%);
+  --purple: hsla(311, 44%, 33%);
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  font: inherit;
+}
+
+img,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  color: var(--dark-blue);
+  font-family: "Fira Code", monospace;
+  background-color: hsl(60, 8%, 40%);
+}
+
+main {
+  min-height: 5em;
+  max-width: 42ch;
+  display: grid;
+  margin-inline: 1em;
+  align-items: center;
+  justify-self: center;
+  text-align: center;
+  gap: 1rem;
+}
+
+main img {
+  max-height: 26em;
+  border-radius: 0.5rem;
+  filter: brightness(0.9);
+}
+
+main img:hover {
+  filter: brightness(1);
+}
+
+a {
+  cursor: pointer;
+}
+
+.small-font {
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.medium-font {
+  font-size: 1.125rem;
+  font-weight: 700;
+}
+
+.large-font {
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.big-spacing {
+  letter-spacing: 0.2ch;
+}
+
+.header-footer {
+  display: grid;
+  text-align: center;
+  justify-self: stretch;
+  padding: 1rem;
+  gap: 1rem;
+  color: var(--light-green-hsl);
+  background-color: var(--dark-blue);
+}
+
+.button-group {
+  display: grid;
+  grid-auto-flow: column;
+  text-align: center;
+}
+
+.button-group a {
+  border-right: 1px solid var(--light-green-alpha);
+}
+
+.button-group a:last-child {
+  border: none;
+}
+
+.button-group a:hover,
+.button-group a:focus-visible {
+  color: var(--purple);
+  filter: brightness(1.6);
+}
+
+.container {
+  width: 30em;
+  display: grid;
+  margin: 1em;
+  border-radius: 0.5em;
+  gap: 1em;
+  background-color: var(--darkish-beige);
+  overflow: hidden;
+  box-shadow: 0.3em 0.3em 1em hsla(217, 62%, 12%, 0.5);
+}
+
+.content-button {
+  justify-self: center;
+  border: 2px solid var(--dark-blue);
+  border-radius: 0.3rem;
+  padding: 0.5rem;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.content-button:hover,
+.content-button:focus-visible {
+  transform: translateY(-3px);
+  cursor: pointer;
+}
+
+#category {
+  font-weight: 500;
+}
